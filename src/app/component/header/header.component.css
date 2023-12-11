@@ -1,0 +1,28 @@
+h1 {
+    position: relative;
+    font-family: 'poppins';
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #8ee1fa, #ffffff, #000000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+img{
+    height: 120px;
+    margin-top: 5px;
+
+}

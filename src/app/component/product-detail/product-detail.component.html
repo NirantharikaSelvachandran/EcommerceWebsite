@@ -1,0 +1,28 @@
+<app-header></app-header>
+<body>
+<div class="container">
+    <div class="row product-detail mt-5">
+        <div class="col-sm-4 mt-3">
+            <img class="product-img" src="{{productdata?.images[0]}}">
+            <div class="text-center mt-3">
+                <button class="btn btn-success" (click)="addtocart(productdata)" *ngIf="showadd"><i class="fa fa-cart-plus mr-2"></i>&nbsp;Add to Cart</button>&nbsp;
+                <button class="btn btn-danger" (click)="removeitem(productdata)" *ngIf="showremove"><i class="fa fa-remove mr-2"></i>&nbsp;Remove Item</button>
+            </div>
+        </div>
+
+        <div class="col-sm-7 mt-5 mx-5">
+            <div>
+                <h1>{{productdata?.title}}</h1>
+                <p class="fs-4" >Special Price</p>
+                <h3 class="fs-2">Price: ${{productdata?.price}}</h3>
+                <p class="fs-4"><b>Category:</b> &nbsp;{{productdata?.category}}</p>
+                <p class="fs-4"><b>Description: </b>&nbsp;{{productdata?.description}}</p>
+                <p class="fs-4" style="color: rgb(10, 66, 10);"><b>Discount:</b> {{productdata?.discountPercentage}} %</p>
+                <strong class="fs-5">Stocks: {{productdata?.stock}} Units left</strong><br>
+                <button routerLink="/" class="btn btn-warning ">BACK</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<app-footer></app-footer>

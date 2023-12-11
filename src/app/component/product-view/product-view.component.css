@@ -1,0 +1,51 @@
+.slider_image{
+    border-radius: 20px;
+}
+
+.carousel-control-prev,
+  .carousel-control-next {
+    background-color: transparent; 
+    border: none;
+  }
+
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+  }
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+h3{
+    font-size: 25px;
+}
+
+.products{
+    margin: 20px;
+    
+}
+
+.products:hover{
+    transform: scale(1.07);
+
+}
+
+.product_img{
+    width: 120px;
+    height: 120px; 
+    border: 1px solid black;
+    padding: 5px;
+}
+
+button{
+    font-size: 14px;
+}
+
+button:hover{
+    color: black;
+    background-color: white;
+}
+

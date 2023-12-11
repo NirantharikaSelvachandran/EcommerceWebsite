@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="container-fluid">
+            <h2 class="text-dark text-center fs-2 mt-3">Welcome to Our site</h2>
+            <h4 class="text-dark text-center mb-2">You can Shop As you Wish</h4>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../../assets/slider1.jpg" class="d-block w-100 h-100 img-fluid  slider_image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../../assets/slider2.jpg" class="d-block w-100 h-100 img-fluid  slider_image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../../assets/slider3.jpg" class="d-block w-100 h-100 img-fluid  slider_image">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-2 bg-light text-center me-2 products" style="border: 1px solid black; border-radius: 10px;"
+            *ngFor="let item of data?.products">
+            <img routerLink="/product_detail/{{item.id}}" src="{{item.thumbnail}}"
+                class="img-fluid product_img rounded mt-4 mb-5"><br>
+            <a class="text-center">{{item.title}}</a><br>
+            <h3 class="text-center">$ {{item.price}}</h3><br>
+
+            <div class="container text-center">
+                <div class="vertical-center text-center">
+                    <button routerLink="/product_detail/{{item.id}}" type="button" class="btn btn-dark mb-3 ">View
+                        Details</button><br>
+                    <button (click)="addtocart(item)" type="button" class="btn btn-warning mb-3"><i
+                            class="fa fa-cart-plus mr-2"></i>&nbsp;Add to Cart</button><br>
+                    <button (click)="removeitem(item)" class="btn btn-danger mb-1"><i
+                            class="fa fa-remove mr-2"></i>&nbsp;Remove Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

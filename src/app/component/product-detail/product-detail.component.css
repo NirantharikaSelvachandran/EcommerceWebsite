@@ -1,0 +1,45 @@
+body{
+    height: 790px;
+}
+
+h2{
+    padding: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    object-fit:contain;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+ 
+
+.product-detail{
+    margin-bottom: 80px;
+}
+
+h3{
+    background-color: black;
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+}
+
+button{
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+button:hover{
+    background-color: black;
+    color:white;
+    font-size: 22px;
+}
